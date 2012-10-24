@@ -68,14 +68,14 @@ int main(void)
 
 			for(j=0; j < 10;j++)
 			{       
-				if(world[i][j].shark != 0 && world[i][j].shark->moved != Year)
+				if(world[i][j].fish != 0 && world[i][j].fish->moved != Year){  
+					world[i][j].fish->moved = Year;
+					FishUpdate(&world[i][j], world, i, j, 9);
+				}
+				else if(world[i][j].shark != 0 && world[i][j].shark->moved != Year)
 				{
 					world[i][j].shark->moved = Year;
 					SharkUpdate(&world[i][j], world, i, j, 9);
-				}
-				else if(world[i][j].fish != 0 && world[i][j].fish->moved != Year){  
-					world[i][j].fish->moved = Year;
-					FishUpdate(&world[i][j], world, i, j, 9);
 				}
 			}
       		
