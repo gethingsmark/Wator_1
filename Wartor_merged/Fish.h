@@ -29,19 +29,19 @@ int ChooseCell(Move Available)
 		Dirrection = r;
 		switch(r){
 			case(0):
-		    if(Available.left == 1)
+		    if(Available.up == 1)
 				x = 1;
 			break;
 			case(1):
-			if(Available.right == 1)
+			if(Available.down == 1)
 				x = 1;
 			break;
 			case(2):
-			if(Available.up == 1)
+			if(Available.left == 1)
 				x = 1;
 			break;
 			case(3):
-			if(Available.down == 1)
+			if(Available.right == 1)
 				x = 1;
 			break;
 		}
